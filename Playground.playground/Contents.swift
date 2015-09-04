@@ -2,9 +2,9 @@
 //: 
 //: So there was a blog post the other day about dependent types:
 //: 
-//: [Why dependent Types Matter](https://jeremywsherman.com/blog/2015/08/26/read-why-dependent-types-matter/)
+//: [Why Dependent Types Matter](https://jeremywsherman.com/blog/2015/08/26/read-why-dependent-types-matter/)
 //: 
-//: Most blog posts that deal with the more mathematical/category theory side of programming go over my head when I read them, only to become suddenly clear a few weeks down the line. I have not reached this such sudden clarity with this post, but I'm starting to see a glimmer.
+//: Most blog posts that deal with the more mathematical/category theory side of programming go over my head when I read them, only to become suddenly clear a few weeks down the line. I have not yet reached sudden clarity with this post, but I'm starting to see a glimmer.
 //: 
 //: In particular, I was reminded of [this post on the Apple developer forums](https://forums.developer.apple.com/message/13216#11179). It describes a way to write a generic vector type, with the length of the vector encoded into the type. Sounds a lot like length-indexed lists, no? I thought so.
 //: 
