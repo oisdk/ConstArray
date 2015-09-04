@@ -1,8 +1,8 @@
-//: # In which I Misunderstand Dependant Types #
+//: # In which I Misunderstand Dependent Types #
 //: 
-//: So there was a blog post the other day about dependant types:
+//: So there was a blog post the other day about dependent types:
 //: 
-//: [Why Dependant Types Matter](https://jeremywsherman.com/blog/2015/08/26/read-why-dependent-types-matter/)
+//: [Why dependent Types Matter](https://jeremywsherman.com/blog/2015/08/26/read-why-dependent-types-matter/)
 //: 
 //: Most blog posts that deal with the more mathematical/category theory side of programming go over my head when I read them, only to become suddenly clear a few weeks down the line. I have not reached this such sudden clarity with this post, but I'm starting to see a glimmer.
 //: 
@@ -64,7 +64,7 @@ enum List<Element> : GeneratorType, SequenceType {
   }
 }
 //: 
-//: So on every `next()` call, `self` is replaced by the tail (`xs`), and the head (`x`) is returned. However, because a vector's type is dependant on its length, you cannot replace `self` with its tail, because the tail is a different type. So for every index call, all the predecessors in the vector must be traversed.
+//: So on every `next()` call, `self` is replaced by the tail (`xs`), and the head (`x`) is returned. However, because a vector's type is dependent on its length, you cannot replace `self` with its tail, because the tail is a different type. So for every index call, all the predecessors in the vector must be traversed.
 //: 
 //: In fact, what we're looking for isn't really a recursive list at all. It's certainly elegant, and it has all that cool functional allure, but it's not necessary. All we really care about is the length: we want to encode *that* as a type. So let's do it! Here again, protocols are going to give us the required power.
 //: 
@@ -163,4 +163,4 @@ public extension ConstArray where Count : NonZero {
     return (temp.removeAtIndex(i), ConstArray<Element, Count.Pred>(contents: temp))
   }
 }
-//: So there you go! Dependant types can (kind of) happen in Swift.
+//: So there you go! dependent types can (kind of) happen in Swift.
